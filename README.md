@@ -1,81 +1,67 @@
 # SecureVoteChain
-🔐 SecureVoteChain
+SecureVoteChain
 
-SecureVoteChain is a Java-based secure online voting system that demonstrates how
-data structures and cryptographic techniques can be used to ensure voter
-authentication, vote integrity, and tamper detection.
+SecureVoteChain is a Java-based online voting integrity system designed to ensure secure
+voter authentication, tamper-evident vote storage, and post-election verification. The
+project demonstrates how appropriate data structures and cryptographic techniques can be
+used to address integrity and trust challenges in digital voting systems.
 
-This project is intended as an academic and learning implementation focused on
-integrity and transparency in online voting.
+This project is developed as an academic and learning-oriented implementation.
 
-❓ Problem Statement
+Problem Statement
 
-Online voting systems often face trust issues due to concerns about:
+Online voting platforms often face concerns regarding unauthorized access, duplicate
+voting, and the potential modification of stored voting data. The lack of transparent
+verification mechanisms reduces trust in digital election processes.
 
-Unauthorized voters
+SecureVoteChain addresses these challenges by providing a structured voting workflow that
+authenticates voters, prevents multiple voting attempts, securely stores votes, and
+supports integrity verification after the election process.
 
-Duplicate voting
+Objectives
 
-Tampering of stored votes
+Authenticate only registered and eligible voters
 
-Lack of post-election verification
+Prevent duplicate and unauthorized voting
 
-SecureVoteChain addresses these issues by providing a tamper-evident voting workflow
-that allows verification of stored votes after the election process.
+Ensure secure and tamper-evident vote storage
 
+Enable post-election integrity verification
 
-🎯 Project Goals
+Maintain efficient system performance
 
-Authenticate only registered voters
+System Overview
 
-Prevent duplicate voting
+The system follows a modular design in which each component performs a specific role in
+the voting process. Voter authentication is handled using a balanced tree structure,
+while hash-based mechanisms are used to prevent duplicate voting. Votes are protected
+using cryptographic hashing and stored in a blockchain-like structure to ensure
+immutability. A Merkle Tree is used to verify the integrity of stored votes, and an audit
+module validates the consistency of the voting records.
 
-Securely store votes
-
-Detect any modification of voting data
-
-Support post-election audit verification
-
-
-🧠 How It Works (High-Level)
-
-Load voter and candidate data
-
-Authenticate voter using a balanced tree
-
-Prevent duplicate voting using hash-based checks
-
-Hash and store votes securely
-
-Append votes to a blockchain structure
-
-Verify integrity using Merkle Tree and audit checks
-
-
-🧩 Data Structures Used
+Data Structures Used
 
 AVL Tree – Efficient voter authentication
 
-HashMap – Duplicate vote prevention and vote tallying
+HashMap – Voter status tracking and vote tallying
 
 Merkle Tree – Vote integrity verification
 
 Blockchain (hash-linked blocks) – Immutable vote storage
 
-Max Heap – Detection of suspicious voting activity
+Max Heap – Detection of abnormal voting behavior
 
+Security and Verification
 
-🔐 Security Features
+SHA-256 hashing for vote confidentiality and integrity
 
-SHA-256 hashing for vote data
+Hash-linked blockchain storage for tamper detection
 
-Tamper-evident blockchain storage
+Merkle Root verification for integrity validation
 
-Merkle Root verification
+Sequential audit verification of stored voting data
 
-Sequential audit verification
-
-📁 Project Structure
+Project Structure
 SecureVoteChain/
 ├── AVLRegistry.java
 ├── AuditVerifier.java
@@ -89,49 +75,45 @@ SecureVoteChain/
 ├── election_data.txt
 └── README.md
 
+Execution Instructions
 
-▶️ How to Run
+Ensure Java is installed on the system
 
-Make sure Java is installed
-
-Compile the source files:
+Compile all source files:
 
 javac *.java
 
-Run the application:
+
+Run the main program:
 
 java VotingSystemDemo
 
+Output
 
-📊 Output
+Valid voters are allowed to cast a single vote
 
-Valid voters can vote once
+Invalid or duplicate voting attempts are rejected
 
-Invalid or duplicate votes are rejected
+Votes are stored in an immutable structure
 
-Votes are stored immutably
+Audit verification confirms data integrity
 
-Audit verification detects tampering
+Future Scope
 
+Secure transmission of votes using encryption
 
-🚀 Future Scope
+Support for distributed or decentralized voting
 
-Encrypted vote transmission
+Enhanced anomaly detection using advanced analytics
 
-Decentralized or distributed deployment
+Improved user interface and usability
 
-Advanced fraud detection techniques
+Project Type
 
-Improved user interface
+Academic Project
+Focused on data structures, algorithms, and security principles.
 
+Disclaimer
 
-🎓 Project Type
-
-Academic / Learning Project
-Focused on data structures, algorithms, and security concepts.
-
-
-📌 Note
-
-This project is a conceptual and educational implementation and is not intended for
-production or real-world elections.
+This project is intended for educational and demonstration purposes only and is not
+designed for deployment in real-world election environments.
