@@ -83,7 +83,8 @@ Distributed or decentralized deployment
 
 Advanced fraud detection mechanisms
 
-##Disclaimer
+
+Disclaimer
 
 This project is intended for educational purposes only and is not designed for real-world
 election deployment.
