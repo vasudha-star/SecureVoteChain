@@ -8,7 +8,6 @@ authentication, vote integrity, and tamper detection.
 This project is intended as an academic and learning implementation focused on
 integrity and transparency in online voting.
 
-
 ❓ Problem Statement
 
 Online voting systems often face trust issues due to concerns about:
