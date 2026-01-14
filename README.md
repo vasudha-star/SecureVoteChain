@@ -64,8 +64,7 @@ SecureVoteChain/
 
 
 ---
-
-###Output
+Output
 
 Valid voters can vote once
 
@@ -75,7 +74,8 @@ Votes are stored immutably
 
 Audit verification detects tampering
 
-###Future Enhancements
+
+Future Enhancements
 
 Encrypted vote transmission
 
@@ -83,7 +83,7 @@ Distributed or decentralized deployment
 
 Advanced fraud detection mechanisms
 
-###Disclaimer
+##Disclaimer
 
 This project is intended for educational purposes only and is not designed for real-world
 election deployment.
