@@ -1,67 +1,54 @@
 # SecureVoteChain
-SecureVoteChain
 
-SecureVoteChain is a Java-based online voting integrity system designed to ensure secure
-voter authentication, tamper-evident vote storage, and post-election verification. The
-project demonstrates how appropriate data structures and cryptographic techniques can be
-used to address integrity and trust challenges in digital voting systems.
+SecureVoteChain is a Java-based online voting integrity system that demonstrates secure
+voter authentication, tamper-evident vote storage, and post-election verification using
+data structures and cryptographic techniques.
 
-This project is developed as an academic and learning-oriented implementation.
+> **Project Type:** Academic / Learning Project
 
-Problem Statement
+---
 
-Online voting platforms often face concerns regarding unauthorized access, duplicate
-voting, and the potential modification of stored voting data. The lack of transparent
-verification mechanisms reduces trust in digital election processes.
+## Problem Overview
 
-SecureVoteChain addresses these challenges by providing a structured voting workflow that
-authenticates voters, prevents multiple voting attempts, securely stores votes, and
-supports integrity verification after the election process.
+Online voting systems often face trust issues due to concerns about unauthorized access,
+duplicate voting, and vote tampering. SecureVoteChain addresses these concerns by providing
+a verifiable and integrity-focused voting workflow.
 
-Objectives
+---
 
-Authenticate only registered and eligible voters
+## Key Objectives
 
-Prevent duplicate and unauthorized voting
+- Authenticate only registered voters  
+- Prevent duplicate and unauthorized voting  
+- Store votes securely and immutably  
+- Detect any modification of stored voting data  
+- Enable post-election audit verification  
 
-Ensure secure and tamper-evident vote storage
+---
 
-Enable post-election integrity verification
+## System Highlights
 
-Maintain efficient system performance
+- Balanced-tree based voter authentication  
+- Hash-based duplicate vote prevention  
+- Cryptographic hashing (SHA-256) for vote security  
+- Blockchain-style immutable vote storage  
+- Merkle Tree based integrity verification  
+- Audit verification of voting records  
 
-System Overview
+---
 
-The system follows a modular design in which each component performs a specific role in
-the voting process. Voter authentication is handled using a balanced tree structure,
-while hash-based mechanisms are used to prevent duplicate voting. Votes are protected
-using cryptographic hashing and stored in a blockchain-like structure to ensure
-immutability. A Merkle Tree is used to verify the integrity of stored votes, and an audit
-module validates the consistency of the voting records.
+## Data Structures Used
 
-Data Structures Used
+- **AVL Tree** – Voter authentication  
+- **HashMap** – Voter status tracking and vote tallying  
+- **Merkle Tree** – Vote integrity verification  
+- **Blockchain (hash-linked blocks)** – Immutable vote storage  
+- **Max Heap** – Suspicious voting activity detection  
 
-AVL Tree – Efficient voter authentication
+---
 
-HashMap – Voter status tracking and vote tallying
+## Project Structure
 
-Merkle Tree – Vote integrity verification
-
-Blockchain (hash-linked blocks) – Immutable vote storage
-
-Max Heap – Detection of abnormal voting behavior
-
-Security and Verification
-
-SHA-256 hashing for vote confidentiality and integrity
-
-Hash-linked blockchain storage for tamper detection
-
-Merkle Root verification for integrity validation
-
-Sequential audit verification of stored voting data
-
-Project Structure
 SecureVoteChain/
 ├── AVLRegistry.java
 ├── AuditVerifier.java
@@ -75,45 +62,34 @@ SecureVoteChain/
 ├── election_data.txt
 └── README.md
 
-Execution Instructions
 
-Ensure Java is installed on the system
+---
 
-Compile all source files:
+## How to Run
 
+```bash
 javac *.java
-
-
-Run the main program:
-
 java VotingSystemDemo
 
 Output
 
-Valid voters are allowed to cast a single vote
+Valid voters can vote once
 
-Invalid or duplicate voting attempts are rejected
+Invalid or duplicate votes are rejected
 
-Votes are stored in an immutable structure
+Votes are stored immutably
 
-Audit verification confirms data integrity
+Audit verification detects tampering
 
-Future Scope
+Future Enhancements
 
-Secure transmission of votes using encryption
+Encrypted vote transmission
 
-Support for distributed or decentralized voting
+Distributed or decentralized deployment
 
-Enhanced anomaly detection using advanced analytics
-
-Improved user interface and usability
-
-Project Type
-
-Academic Project
-Focused on data structures, algorithms, and security principles.
+Advanced fraud detection mechanisms
 
 Disclaimer
 
-This project is intended for educational and demonstration purposes only and is not
-designed for deployment in real-world election environments.
+This project is intended for educational purposes only and is not designed for real-world
+election deployment.
