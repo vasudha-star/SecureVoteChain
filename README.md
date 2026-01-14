@@ -65,12 +65,6 @@ SecureVoteChain/
 
 ---
 
-## How to Run
-
-```bash
-javac *.java
-java VotingSystemDemo
-
 Output
 
 Valid voters can vote once
@@ -93,3 +87,11 @@ Disclaimer
 
 This project is intended for educational purposes only and is not designed for real-world
 election deployment.
+
+
+## How to Run
+
+```bash
+javac *.java
+java VotingSystemDemo
+
