@@ -8,6 +8,7 @@ authentication, vote integrity, and tamper detection.
 This project is intended as an academic and learning implementation focused on
 integrity and transparency in online voting.
 
+
 ❓ Problem Statement
 
 Online voting systems often face trust issues due to concerns about:
@@ -23,6 +24,7 @@ Lack of post-election verification
 SecureVoteChain addresses these issues by providing a tamper-evident voting workflow
 that allows verification of stored votes after the election process.
 
+
 🎯 Project Goals
 
 Authenticate only registered voters
@@ -34,6 +36,7 @@ Securely store votes
 Detect any modification of voting data
 
 Support post-election audit verification
+
 
 🧠 How It Works (High-Level)
 
@@ -49,6 +52,7 @@ Append votes to a blockchain structure
 
 Verify integrity using Merkle Tree and audit checks
 
+
 🧩 Data Structures Used
 
 AVL Tree – Efficient voter authentication
@@ -60,6 +64,7 @@ Merkle Tree – Vote integrity verification
 Blockchain (hash-linked blocks) – Immutable vote storage
 
 Max Heap – Detection of suspicious voting activity
+
 
 🔐 Security Features
 
@@ -85,6 +90,7 @@ SecureVoteChain/
 ├── election_data.txt
 └── README.md
 
+
 ▶️ How to Run
 
 Make sure Java is installed
@@ -93,10 +99,10 @@ Compile the source files:
 
 javac *.java
 
-
 Run the application:
 
 java VotingSystemDemo
+
 
 📊 Output
 
@@ -108,6 +114,7 @@ Votes are stored immutably
 
 Audit verification detects tampering
 
+
 🚀 Future Scope
 
 Encrypted vote transmission
@@ -118,10 +125,12 @@ Advanced fraud detection techniques
 
 Improved user interface
 
+
 🎓 Project Type
 
 Academic / Learning Project
 Focused on data structures, algorithms, and security concepts.
+
 
 📌 Note
 
